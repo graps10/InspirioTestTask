@@ -20,7 +20,7 @@ namespace UI
 
         private void OnEnable()
         {
-            playButton.onClick.AddListener(() => LoadLevel("GameScene"));
+            playButton.onClick.AddListener(() => LoadLevel("SlotsScene"));
             workoutButton.onClick.AddListener(() => LoadLevel("WorkoutScene"));
             awardsButton.onClick.AddListener(() => LoadLevel("AwardsScene"));
             boardButton.onClick.AddListener(() => LoadLevel("BoardScene"));

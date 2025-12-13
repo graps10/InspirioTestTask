@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5fab58adc23ebe444867f3f3ae73d412
+guid: 25d29f20fc194cf429a347c9fab3370f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4680663939318324187
-    second: freepik_edit_A-highquality-image-of-a-fit-female-athlete-perfor_0
+      213: 8834098460878202828
+    second: workout complete_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: freepik_edit_A-highquality-image-of-a-fit-female-athlete-perfor_0
+      name: workout complete_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 16
-        width: 110
-        height: 169
+        x: 5
+        y: 6
+        width: 629
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bdb9c08bd0f05f040800000000000000
-      internalID: 4680663939318324187
+      spriteID: cc7687fbeb5099a70800000000000000
+      internalID: 8834098460878202828
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      freepik_edit_A-highquality-image-of-a-fit-female-athlete-perfor_0: 4680663939318324187
+      workout complete_0: 8834098460878202828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

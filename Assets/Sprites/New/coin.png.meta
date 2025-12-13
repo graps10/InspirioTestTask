@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a5a214274befdad429d470cdeee2a883
+guid: 010f3000baa5d5c4e9b3d348a28049ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2958203447403351887
-    second: card_3 (1)_0
+      213: 7675826601332790545
+    second: coin_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: reel_right
+      name: coin_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 11
-        width: 89
-        height: 235
+        x: 5
+        y: 5
+        width: 194
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4f00d7bc56ad0920800000000000000
-      internalID: 2958203447403351887
+      spriteID: 1155fe920a3068a60800000000000000
+      internalID: 7675826601332790545
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9c1b1a5765092c54882095e955a524ba
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      reel_right: 2958203447403351887
+      coin_0: 7675826601332790545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

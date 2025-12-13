@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: c527246612c8e1949852b0528db2a22a
+guid: 21ae316e58f35fd489986c9be2da14d1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3828699103489187806
-    second: card_1 (1)_0
+      213: 4451695576559125131
+    second: bttn_0
+  - first:
+      213: -6362033005968127194
+    second: bttn_1
+  - first:
+      213: -6389446622264495454
+    second: bttn_2
+  - first:
+      213: 3432117733737134695
+    second: bttn_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: reel_left
+      name: bttn_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 12
-        width: 84
-        height: 232
+        x: 0
+        y: 0
+        width: 68
+        height: 90
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 220aba0637abddac0800000000000000
-      internalID: -3828699103489187806
+      spriteID: b820cf07a8997cd30800000000000000
+      internalID: 4451695576559125131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bttn_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 54
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b85f540b485b7a0800000000000000
+      internalID: -6362033005968127194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bttn_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 89
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2fa9856202457a0800000000000000
+      internalID: -6389446622264495454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bttn_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a78ba05e451af20800000000000000
+      internalID: 3432117733737134695
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e1d59023dc681244b9cf5edc6179e0db
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      reel_left: -3828699103489187806
+      bttn_0: 4451695576559125131
+      bttn_1: -6362033005968127194
+      bttn_2: -6389446622264495454
+      bttn_3: 3432117733737134695
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
