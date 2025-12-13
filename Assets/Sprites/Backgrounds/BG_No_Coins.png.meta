@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 21ae316e58f35fd489986c9be2da14d1
+guid: 28d6bbbbdbd375f44ae8781f292c5f70
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4451695576559125131
-    second: bttn_0
-  - first:
-      213: -6362033005968127194
-    second: bttn_1
-  - first:
-      213: -6389446622264495454
-    second: bttn_2
-  - first:
-      213: 3432117733737134695
-    second: bttn_3
+      213: -1886654387234455280
+    second: BG_No_Coins_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bttn_0
+      name: BG_No_Coins_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 68
-        height: 90
+        width: 1125
+        height: 2436
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b820cf07a8997cd30800000000000000
-      internalID: 4451695576559125131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bttn_1
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 0
-        width: 54
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 62b85f540b485b7a0800000000000000
-      internalID: -6362033005968127194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bttn_2
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 0
-        width: 89
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a2fa9856202457a0800000000000000
-      internalID: -6389446622264495454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bttn_3
-      rect:
-        serializedVersion: 2
-        x: 212
-        y: 0
-        width: 82
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76a78ba05e451af20800000000000000
-      internalID: 3432117733737134695
+      spriteID: 01145faa4d141d5e0800000000000000
+      internalID: -1886654387234455280
       vertices: []
       indices: 
       edges: []
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bttn_0: 4451695576559125131
-      bttn_1: -6362033005968127194
-      bttn_2: -6389446622264495454
-      bttn_3: 3432117733737134695
+      BG_No_Coins_0: -1886654387234455280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

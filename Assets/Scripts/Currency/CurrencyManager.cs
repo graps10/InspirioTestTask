@@ -4,7 +4,7 @@ using UnityEngine;
 public static class CurrencyManager
 {
     private const string Coins_Key = "Coins_Save";
-    private const int Default_Coins = 100;
+    private const int Default_Coins = 0;
     
     public static event Action<int> OnCoinsChanged;
 

@@ -10,16 +10,16 @@ namespace Slots
         [SerializeField] private RectTransform contentRect;
 
         [Header("Animation Settings")] 
-        [SerializeField] private float spinSpeed = 2000f;
+        [SerializeField] private float spinSpeed = 1500f;
         [Tooltip("How high the reel jumps before spinning down")]
         [SerializeField] private float startJumpStrength = 50f;
         [SerializeField] private float startJumpDuration = 0.2f;
-        [SerializeField] private float stopLandingDuration = 0.25f;
+        [SerializeField] private float stopLandingDuration = 0.1f;
         [SerializeField] private Ease stopEaseType = Ease.OutBack;
 
         [Header("Grid Settings")]
         [SerializeField] private float itemHeight = 350f;
-        [SerializeField] private float spacing = 80f;
+        [SerializeField] private float spacing = 100f;
 
         private int _symbolCount;
         private float _stride;    

@@ -1,4 +1,6 @@
 using System.Collections;
+using UI.Popups;
+using UI.Slots;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -11,7 +13,7 @@ namespace Slots
         [SerializeField] private Button spinButton;
     
         [Header("Settings")]
-        [SerializeField] private int symbolCount = 6;
+        [SerializeField] private int symbolCount = 5;
         [SerializeField] private float spinDuration = 2.0f;
         [SerializeField] private float reelDelay = 0.3f;
         [Tooltip("Additional delay after spin finishes to show win popup (accounts for landing animation)")]
@@ -20,6 +22,9 @@ namespace Slots
         [Header("Rewards")]
         [SerializeField] private int smallWinAmount = 100;
         [SerializeField] private int bigWinAmount = 300;
+        
+        [Header("UI Components")]
+        [SerializeField] private SlotFooterUI footerUI;
         
         private bool _isSpinning;
         private int[] _currentResult;
@@ -32,6 +37,8 @@ namespace Slots
         {
             foreach(var reel in reels) 
                 reel.Initialize(symbolCount);
+            
+            footerUI.SetState("SPIN TO WIN", true);
         }
 
         private void StartSpin()
@@ -41,9 +48,11 @@ namespace Slots
             _isSpinning = true;
             spinButton.interactable = false;
             
+            footerUI.SetState("GOOD LUCK...", true);
+            
             _currentResult = GenerateRandomResult();
             
-            Debug.Log($"Spin Result: [{string.Join(", ", _currentResult)}]");
+            //Debug.Log($"Spin Result: [{string.Join(", ", _currentResult)}]");
             
             for (int i = 0; i < reels.Length; i++)
                 reels[i].Spin(spinDuration, _currentResult[i], i * reelDelay);
@@ -74,28 +83,41 @@ namespace Slots
         {
             if (IsJackpot(_currentResult))
             {
-                Debug.Log($"BIG WIN! +{bigWinAmount}");
+                PopupManager.Instance.ShowSlotWin(bigWinAmount);
                 CurrencyManager.AddCoins(bigWinAmount);
+                footerUI.SetState("BIG WIN!", false, bigWinAmount, true);
             }
             else if (IsSmallWin(_currentResult))
             {
-                Debug.Log($"Small Win! +{smallWinAmount}");
+                //Debug.Log($"Small Win! +{smallWinAmount}");
                 CurrencyManager.AddCoins(smallWinAmount);
+                footerUI.SetState("YOU WON",false, smallWinAmount, true);
             }
             else
-                Debug.Log("No luck this time.");
+            {
+                //Debug.Log("No luck");
+                footerUI.SetState("TRY AGAIN", true);
+            }
         }
         
         private bool IsJackpot(int[] results)
         {
-            return results[0] == results[1] && results[1] == results[2];
+            if (results.Length == 0) return false;
+            int firstSymbol = results[0];
+            
+            for (int i = 1; i < results.Length; i++)
+                if (results[i] != firstSymbol) return false;
+            
+            return true;
         }
 
         private bool IsSmallWin(int[] results)
         {
-            return results[0] == results[1] || 
-                   results[1] == results[2] || 
-                   results[0] == results[2];
+            if (results.Length < 3) return false; 
+    
+            return results[0] == results[1] 
+                   || results[1] == results[2] 
+                   || results[0] == results[2];
         }
     }
 }

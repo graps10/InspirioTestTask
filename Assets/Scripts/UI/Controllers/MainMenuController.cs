@@ -3,7 +3,7 @@ using SceneControl;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.Controllers
 {
     public class MainMenuController : MonoBehaviour
     {

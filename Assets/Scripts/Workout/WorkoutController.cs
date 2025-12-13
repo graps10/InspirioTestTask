@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using TMPro;
+using UI.Popups;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ namespace Workout
 {
     public class WorkoutController : MonoBehaviour
     {
+        private const int Seconds_Per_Minute = 60;
+        
         [Header("UI References")]
         [SerializeField] private TextMeshProUGUI timerText;
         [SerializeField] private Button startButton;
@@ -49,7 +52,7 @@ namespace Workout
             if (_timerCoroutine != null) StopCoroutine(_timerCoroutine);
             
             _isRunning = false;
-            startButton.interactable = true;
+            if(startButton != null) startButton.interactable = true;
             ResetTimerUI();
         }
 
@@ -57,25 +60,26 @@ namespace Workout
 
         private IEnumerator TimerRoutine()
         {
-            UpdateTimerText(_currentTime);
-
-            while (_currentTime > 0)
+            float endTime = Time.time + workoutDuration;
+    
+            while (Time.time < endTime)
             {
-                yield return new WaitForSeconds(1f);
-                
-                _currentTime--;
-                UpdateTimerText(_currentTime);
+                float remaining = endTime - Time.time;
+                UpdateTimerText(remaining);
+                yield return null;
             }
-
+    
+            UpdateTimerText(0);
             FinishWorkout();
         }
 
         private void UpdateTimerText(float timeInSeconds)
         {
-            int minutes = Mathf.FloorToInt(timeInSeconds / 60);
-            int seconds = Mathf.FloorToInt(timeInSeconds % 60);
+            int minutes = Mathf.FloorToInt(timeInSeconds / Seconds_Per_Minute);
+            int seconds = Mathf.FloorToInt(timeInSeconds % Seconds_Per_Minute);
             
-            timerText.text = $"{minutes:00}:{seconds:00}";
+            if(timerText != null)
+                timerText.text = $"{minutes:00}:{seconds:00}";
         }
 
         private void FinishWorkout()
@@ -83,7 +87,8 @@ namespace Workout
             _isRunning = false;
             startButton.interactable = true;
             
-            Debug.Log($"Workout Finished! Reward: {rewardAmount}");
+            //Debug.Log($"Workout Finished! Reward: {rewardAmount}");
+            PopupManager.Instance.ShowWorkoutComplete(rewardAmount);
             CurrencyManager.AddCoins(rewardAmount);
             
             ResetTimerUI();
