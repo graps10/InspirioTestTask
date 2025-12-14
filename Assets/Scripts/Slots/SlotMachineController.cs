@@ -1,4 +1,5 @@
 using System.Collections;
+using Audio;
 using UI.Popups;
 using UI.Slots;
 using UnityEngine;
@@ -50,6 +51,8 @@ namespace Slots
             
             footerUI.SetState("GOOD LUCK...", true);
             
+            AudioManager.Instance.PlayLoopingSound(SoundType.SlotsReelsLoop);
+            
             _currentResult = GenerateRandomResult();
             
             //Debug.Log($"Spin Result: [{string.Join(", ", _currentResult)}]");
@@ -74,6 +77,8 @@ namespace Slots
 
         private IEnumerator WaitForSpinComplete(float delay)
         {
+            AudioManager.Instance.StopLoopingSound(SoundType.SlotsReelsLoop);
+            
             yield return new WaitForSeconds(delay);
             ProcessWin();
             
@@ -85,20 +90,25 @@ namespace Slots
         {
             if (IsJackpot(_currentResult))
             {
+                AudioManager.Instance.PlaySound(SoundType.WinBig);
                 PopupManager.Instance.ShowSlotWin(bigWinAmount);
+                
                 CurrencyManager.AddCoins(bigWinAmount);
                 footerUI.SetState("BIG WIN!", false, bigWinAmount, true);
             }
             else if (IsSmallWin(_currentResult))
             {
-                //Debug.Log($"Small Win! +{smallWinAmount}");
+                AudioManager.Instance.PlaySound(SoundType.WinSmall);
+                
                 CurrencyManager.AddCoins(smallWinAmount);
                 footerUI.SetState("YOU WON",false, smallWinAmount, true);
+                //Debug.Log($"Small Win! +{smallWinAmount}");
             }
             else
             {
-                //Debug.Log("No luck");
+                AudioManager.Instance.PlaySound(SoundType.Lose);
                 footerUI.SetState("TRY AGAIN", true);
+                //Debug.Log("No luck");
             }
         }
         

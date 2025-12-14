@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5209d0c8f86e430eb4a89ac55356c65d, type: 3}
   m_Name: Award_Silver
   m_EditorClassIdentifier: 
-  ID: Award_Silver
   Title: Iron Man
   Description: Finish 1 workout
-  UnlockedIcon: {fileID: 7170308798370805477, guid: e3f2d649e06197548ab2205dd5cfde57, type: 3}
+  UnlockedIcon: {fileID: 1040115516639104325, guid: d97d6cb892b7a9b43b7896ec2c146680, type: 3}
   LockedIcon: {fileID: -6463678625539627624, guid: e470ebbf51ba036488fb3edad776477b, type: 3}
   ConditionType: 2
   TargetValue: 1

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Utils;
 
 namespace UI.Popups
 {
@@ -9,6 +10,7 @@ namespace UI.Popups
         [Header("Popups References")]
         [SerializeField] private RewardPopup slotsWinPopup;
         [SerializeField] private RewardPopup workoutWinPopup;
+        [SerializeField] private SettingsPopup settingsPopup;
 
         private void Awake()
         {
@@ -30,6 +32,7 @@ namespace UI.Popups
             }
             
             slotsWinPopup.Setup(amount);
+            VibrationManager.Vibrate();
         }
 
         public void ShowWorkoutComplete(int amount)
@@ -41,6 +44,18 @@ namespace UI.Popups
             }
             
             workoutWinPopup.Setup(amount);
+            VibrationManager.Vibrate();
+        }
+
+        public void ShowSettings()
+        {
+            if (settingsPopup == null) 
+            {
+                Debug.LogError("Settings Popup is not assigned!");
+                return;
+            }
+            
+            settingsPopup.Show();
         }
     }
 }

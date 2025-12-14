@@ -1,0 +1,15 @@
+﻿using UnityEngine;
+
+namespace Utils
+{
+    public static class VibrationManager
+    {
+        public static void Vibrate()
+        {
+            if (!GameDataManager.IsVibrationOn) return;
+            
+            Handheld.Vibrate();
+            //Debug.Log("[Vibration] Buzz!");
+        }
+    }
+}

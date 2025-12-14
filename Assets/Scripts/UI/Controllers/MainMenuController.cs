@@ -25,8 +25,6 @@ namespace UI.Controllers
             awardsButton.onClick.AddListener(() => LoadLevel("AwardsScene"));
             boardButton.onClick.AddListener(() => LoadLevel("BoardScene"));
             
-            // TODO: settings button opens settings popup
-            
             AnimateButtonsEntrance();
         }
 
@@ -36,7 +34,6 @@ namespace UI.Controllers
             workoutButton.onClick.RemoveAllListeners();
             awardsButton.onClick.RemoveAllListeners();
             boardButton.onClick.RemoveAllListeners();
-            settingsButton.onClick.RemoveAllListeners();
         }
 
         private void LoadLevel(string sceneName)

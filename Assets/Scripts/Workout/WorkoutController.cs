@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Audio;
 using TMPro;
 using UI.Popups;
 using UnityEngine;
@@ -87,13 +88,16 @@ namespace Workout
             _isRunning = false;
             startButton.interactable = true;
             
-            //Debug.Log($"Workout Finished! Reward: {rewardAmount}");
+            AudioManager.Instance.PlaySound(SoundType.WorkoutComplete);
+            
             PopupManager.Instance.ShowWorkoutComplete(rewardAmount);
             CurrencyManager.AddCoins(rewardAmount);
             
             GameDataManager.IncrementWorkouts();
             
             ResetTimerUI();
+            
+            //Debug.Log($"Workout Finished! Reward: {rewardAmount}");
         }
     }
 }

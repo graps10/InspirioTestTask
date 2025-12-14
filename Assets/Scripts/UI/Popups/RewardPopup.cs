@@ -15,11 +15,5 @@ namespace UI.Popups
             
             base.Show();
         }
-
-        protected override void Hide()
-        {
-           // AudioManager.PlaySound("UI_Close");
-            base.Hide();
-        }
     }
 }

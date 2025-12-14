@@ -36,13 +36,13 @@ namespace UI.Popups
             CloseInstant();
         }
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             if (closeButton)
                 closeButton.onClick.AddListener(Hide);
         }
 
-        private void OnDisable()
+        protected virtual void OnDisable()
         {
             if (closeButton)
                 closeButton.onClick.RemoveListener(Hide);

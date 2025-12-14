@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 592772026305795479}
   - component: {fileID: 7034698751032544994}
   - component: {fileID: 4514588471143776083}
+  - component: {fileID: 1382995151602607575}
   m_Layer: 5
   m_Name: Btn_Return
   m_TagString: Untagged
@@ -212,6 +213,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSceneName: MainMenu
+--- !u!114 &1382995151602607575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093553407678765507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaed3e71412944bc939568f32a1bd184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: 1
 --- !u!1 &2350231278741795871
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +238,8 @@ GameObject:
   - component: {fileID: 2104318383082610590}
   - component: {fileID: 2066280126459631244}
   - component: {fileID: 7874959253748974063}
+  - component: {fileID: 5208467924531061648}
+  - component: {fileID: 8713955110488063639}
   m_Layer: 5
   m_Name: Btn_Settings
   m_TagString: Untagged
@@ -333,6 +349,31 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5208467924531061648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350231278741795871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bcc3714deb14c1f88cb1d54f1c2147b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8713955110488063639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350231278741795871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaed3e71412944bc939568f32a1bd184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: 1
 --- !u!1 &3074428062820752734
 GameObject:
   m_ObjectHideFlags: 0
