@@ -91,6 +91,8 @@ namespace Workout
             PopupManager.Instance.ShowWorkoutComplete(rewardAmount);
             CurrencyManager.AddCoins(rewardAmount);
             
+            GameDataManager.IncrementWorkouts();
+            
             ResetTimerUI();
         }
     }

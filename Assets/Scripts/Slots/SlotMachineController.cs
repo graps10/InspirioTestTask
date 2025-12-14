@@ -59,6 +59,8 @@ namespace Slots
             
             float totalWaitTime = spinDuration + (reels.Length * reelDelay) + winCheckDelay;
             StartCoroutine(WaitForSpinComplete(totalWaitTime));
+            
+            GameDataManager.IncrementTotalSpins();
         }
         
         private int[] GenerateRandomResult()

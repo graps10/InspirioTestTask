@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 34ddcf00dbbf74845af5fa7dec51d29a
+guid: c51c3f21f3bdd46459b5910f5903aad4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8768895173943935935
-    second: Frame 1171275707_0
+      213: 3366920199945188933
+    second: silver_frame_with_silver_crown_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frame 1171275707_0
+      name: silver_frame_with_silver_crown_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 20
-        width: 1365
-        height: 1129
+        x: 0
+        y: 0
+        width: 356
+        height: 425
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb3c09b73bf51b970800000000000000
-      internalID: 8768895173943935935
+      spriteID: 546f1d84514b9be20800000000000000
+      internalID: 3366920199945188933
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 46dfba4341d464c4a871e451c1dae09d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Frame 1171275707_0: 8768895173943935935
+      silver_frame_with_silver_crown_0: 3366920199945188933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,20 +1,15 @@
 using System;
-using UnityEngine;
 
 public static class CurrencyManager
 {
-    private const string Coins_Key = "Coins_Save";
-    private const int Default_Coins = 0;
-    
     public static event Action<int> OnCoinsChanged;
 
     public static int Coins
     {
-        get => PlayerPrefs.GetInt(Coins_Key, Default_Coins);
-        private set
+        get => GameDataManager.Coins;
+        private set 
         {
-            PlayerPrefs.SetInt(Coins_Key, value);
-            PlayerPrefs.Save();
+            GameDataManager.Coins = value;
             OnCoinsChanged?.Invoke(value);
         }
     }

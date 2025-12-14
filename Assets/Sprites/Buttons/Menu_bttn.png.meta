@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 79b9fdf0d793103459819732808ebaf6
+guid: 21f6d7c68a493a6458f7295f421a2ccc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -165261748945356401
-    second: Frame 1171275694_0
+      213: 6323939404179193323
+    second: Menu_bttn_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -53,7 +53,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frame 1171275694_0
+      name: Menu_bttn_0
       rect:
         serializedVersion: 2
-        x: 248
-        y: 301
-        width: 679
-        height: 179
+        x: 13
+        y: 9
+        width: 1098
+        height: 513
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f89f62f905fd4bdf0800000000000000
-      internalID: -165261748945356401
+      spriteID: bed3237e16523c750800000000000000
+      internalID: 6323939404179193323
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 60b4417c9e1988b42b300e8709c39f8c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Frame 1171275694_0: -165261748945356401
+      Menu_bttn_0: 6323939404179193323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
