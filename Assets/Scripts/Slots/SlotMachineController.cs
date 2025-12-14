@@ -60,8 +60,10 @@ namespace Slots
             for (int i = 0; i < reels.Length; i++)
                 reels[i].Spin(spinDuration, _currentResult[i], i * reelDelay);
             
-            float totalWaitTime = spinDuration + (reels.Length * reelDelay) + winCheckDelay;
-            StartCoroutine(WaitForSpinComplete(totalWaitTime));
+            float mainSpinTime = spinDuration + (reels.Length * reelDelay);
+            float landingTime = winCheckDelay;
+            
+            StartCoroutine(WaitForSpinComplete(mainSpinTime, landingTime));
             
             GameDataManager.IncrementTotalSpins();
         }
@@ -75,11 +77,12 @@ namespace Slots
             return result;
         }
 
-        private IEnumerator WaitForSpinComplete(float delay)
+        private IEnumerator WaitForSpinComplete(float spinTime, float landingDuration)
         {
+            yield return new WaitForSeconds(spinTime);
             AudioManager.Instance.StopLoopingSound(SoundType.SlotsReelsLoop);
             
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(landingDuration);
             ProcessWin();
             
             _isSpinning = false;

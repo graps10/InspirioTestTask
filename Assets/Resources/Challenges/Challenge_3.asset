@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1b337678404290ab5fc7264d855050, type: 3}
+  m_Name: Challenge_3
+  m_EditorClassIdentifier: 
+  Title: Daily challenge 3
+  Description: Run challenge
+  RewardMultiplier: 2
+  BackgroundSprite: {fileID: -785625890066385561, guid: 120cec4664dea6f49994b6ae38f4a672, type: 3}
