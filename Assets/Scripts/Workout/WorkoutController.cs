@@ -45,6 +45,7 @@ namespace Workout
             _currentTime = workoutDuration;
             startButton.interactable = false;
 
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
             _timerCoroutine = StartCoroutine(TimerRoutine());
         }
 
@@ -54,6 +55,8 @@ namespace Workout
             
             _isRunning = false;
             if(startButton != null) startButton.interactable = true;
+            
+            Screen.sleepTimeout = SleepTimeout.SystemSetting;
             ResetTimerUI();
         }
 
@@ -88,6 +91,7 @@ namespace Workout
             _isRunning = false;
             startButton.interactable = true;
             
+            Screen.sleepTimeout = SleepTimeout.SystemSetting;
             AudioManager.Instance.PlaySound(SoundType.WorkoutComplete);
             
             PopupManager.Instance.ShowWorkoutComplete(rewardAmount);
