@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 187548810}
   startButton: {fileID: 6984329592255825718}
-  workoutDuration: 10
+  workoutDuration: 300
   rewardAmount: 300
 --- !u!4 &37951675
 Transform:
